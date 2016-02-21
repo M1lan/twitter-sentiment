@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+'use strict';
+
+const argv = require('yargs')
+  .usage('$0 <cmd> [args]')
+  .option('track', {
+    alias: 't',
+    describe: 'query to track'
+  })
+  .help('help')
+  .argv;
+
+const getTweetStream = require('../lib/tweet-stream.js');
+const getUIStateStream = require('../lib/ui-state-stream');
+
+const tweetStream = getTweetStream(argv.track);
+const uiStateStream = getUIStateStream(tweetStream);
+
+const streamUi = require('./stream-ui');
+
+streamUi(uiStateStream);
