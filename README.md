@@ -1,8 +1,8 @@
-# twitter-sentiment
+# sentiment analysis 
 
 ## Description
 
-Tracks twitter queries and displays live graphs from sentiment analysis
+Tracks twitter queries and displays live CLI graphs
 
 ## Setup
 

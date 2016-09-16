@@ -1,3 +1,5 @@
+// Time-stamp: <2016-09-16 13:12:36 milan.santosi@dojomadness.com>
+
 'use strict';
 
 const colors = require('colors/safe');
