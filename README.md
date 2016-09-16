@@ -1,12 +1,12 @@
-# sentiment analysis 
+# sentiment analysis prototype cli tool
 
-## Description
-
+## what it does?
 Tracks twitter queries and displays live CLI graphs
 
-## Setup
+## installation instructions
 
-Create config.js with
+- clone repo
+- create config.js with
 
 ```javascript
 module.exports = {
@@ -17,13 +17,19 @@ module.exports = {
 };
 ```
 
-and fill in your keys and secrets
 
-Run `npm install`
+...and fill in your keys and secrets.  You will need valid Twitter
+developer credentials in the form of a set of consumer and access
+tokens/keys. You can get these here: https://apps.twitter.com/. Please
+don't forgot to adjust your permissions - most POST request require
+write permissions.
 
 
-## Running it
+- Run `npm install`
+
+
+## running
 
 ```
-./bin/sentiment-stream --track={query}
+./bin/sentiment-stream --track="query"
 ```
